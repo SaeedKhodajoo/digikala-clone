@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -27,6 +27,20 @@
     <title>React App</title>
   </head>
   <body>
+    <style>
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        input[type="range"]::-webkit-slider-thumb {
+          width: 16px;
+          -webkit-appearance: none;
+          appearance: none;
+          height: 16px;
+          cursor: pointer;
+          background: #2d8aa490;
+          box-shadow: -405px 0 0 400px #2d8ba4;
+          border-radius: 50%;
+        }
+      }
+    </style>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
