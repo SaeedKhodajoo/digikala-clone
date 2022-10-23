@@ -134,7 +134,10 @@ function Header() {
             <ArrowLeftOnRectangleIcon className="w-6 h-6" />
             <span className="font-yekan text-lg">ورود</span>
           </div>
-          <ShoppingCartIcon className="h-6 w-6  cursor-pointer" />
+           <Link to="/cart" className="relative">
+              <ShoppingCartIcon className="h-6 w-6  cursor-pointer" />
+             {cart.totalQuantity > 0 && <span className="absolute top-[-0.3rem] right-[-0.3rem] bg-red-600 px-[0.2rem] text-white rounded-full text-xs flex items-center justify-center">{cart.totalQuantity}</span>}
+            </Link>
         </div>
         <hr />
         <div className="flex items-center justify-between cursor-pointer">
